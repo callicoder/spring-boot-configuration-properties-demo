@@ -2,6 +2,7 @@ package com.example.demo.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.convert.DurationUnit;
+import org.springframework.validation.annotation.Validated;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
@@ -14,6 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 @ConfigurationProperties(prefix = "app")
+@Validated
 public class AppProperties {
     @NotNull
     private String name;
